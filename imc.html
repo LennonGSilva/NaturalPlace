@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cálculo IMC</title>
+	<link rel="stylesheet" type="text/css" href="css/imc.css">
+</head>
+<body>
+	<nav id="nav">
+	<?php 	
+	require_once('header.html');?>
+</nav>
+<div class ="row">
+	<div class="columni">
+		<h3>Cálculo IMC</h3>
+		<p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+<p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+
+<p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos ao lado e compare com os índices da tabela. </p>
+<p>Importante: siga os exemplos e use pontos como separadores.</p>
+
+	</div>
+	<div class="columnf">
+	<form method="POST" action="">
+	
+	<label id="metros" >Altura </label><br><input  type="text" name="Metros"  placeholder="Metros" ><br>
+	<label id="peso">Peso</label><br><input  type="text" name="metros" placeholder="Quilos"><br>
+	<input id="sbutton"type="submit" id ="button" value="Calcular" name="calc"><br>
+</div>
+
+<div class="columnt">
+
+  <table>
+  <tr>
+    <th>IMC</th>
+    <th>CLASSIFICAÇÃO</th>
+  </tr>
+  <tr>
+    <td class="cord">MENOR QUE 18,5</td>
+    <td class="cord" >MAGREZA</td>
+  </tr>
+  <tr>
+    <td>ENTRE 18,5 E 24,5</td>
+    <td>NORMAL</td>
+   </tr>
+   <tr>
+    <td class="cord">ENTRE 25,0 E 29,9</td>
+    <td class="cord">SOBREPESO</td>
+   </tr>
+    <tr>
+    <td>ENTRE 30,0 E 39,9</td>
+    <td>OBESO</td>
+   </tr>
+    <tr>
+    <td class="cord">MAIOR QUE 40,0</td>
+    <td class="cord">OBSIDADE GRAVE</td>
+   </tr>
+</table>
+</div>
+</div>
+
+	<?php	
+	require_once('footer.html');?>
+</body>
+</html>
