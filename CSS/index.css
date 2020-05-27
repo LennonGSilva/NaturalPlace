@@ -206,10 +206,10 @@ width: 95%;
 }
 #indeximg0{
 	position: absolute;
+	width: 100%;
+	height:100%;
 	
-	height:30vh;
-	
-  height: auto;
+  
   opacity: 0.3;
 }
 
