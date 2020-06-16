@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title>Cálculo IMC</title>
@@ -21,11 +21,37 @@
 
 	</div>
 	<div class="columnf">
-	<form method="POST" action="">
+	<form name="imcForm" id="imcForm" method="GET">
 	
-	<label id="metros" >Altura </label><br><input  type="text" name="Metros"  placeholder="Metros" ><br>
-	<label id="peso">Peso</label><br><input  type="text" name="metros" placeholder="Quilos"><br>
-	<input id="sbutton"type="submit" id ="button" value="Calcular" name="calc"><br>
+	<label id="altura" >Altura </label><br><input  type="text" name="altura" id="altura" placeholder="Metros" ><br>
+	<label id="peso">Peso</label><br><input  type="text" name="peso" id="peso" placeholder="Quilos"><br>
+<?php
+if (isset($_GET["calcular"])){
+$peso = $_GET["peso"];
+$altura = $_GET["altura"];
+
+
+$imc = $peso/($altura*$altura);
+
+if ($imc <=18.50)
+  echo " <br> Seu IMC É:$imc MAGREZA";
+elseif ($imc <= 24.99)
+  echo " <br> Seu IMC É:$imc  NORMAL";
+elseif ($imc <= 29.99)
+  echo " <br> Seu IMC É:$imc SOBREPESO";
+elseif ($imc <=39.99)
+  echo " <br> Seu IMC É:$imc OBESO";
+elseif ($imc>=40)
+  echo " <br> Seu IMC É:$imc OBSIDADE GRAVE";
+}
+?>
+
+
+  
+	<input id="sbutton"type="submit" id ="button" value="Calcular" name="calcular"><br>
+
+
+
 </div>
 
 <div class="columnt">
@@ -61,5 +87,9 @@
 
 	<?php	
 	require_once('footer.html');?>
+
+
+
+
 </body>
 </html>
